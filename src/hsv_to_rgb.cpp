@@ -1,0 +1,17 @@
+#include "hsv_to_rgb.h"
+
+void hsv_to_rgb(
+  const double h,
+  const double s,
+  const double v,
+  double & r,
+  double & g,
+  double & b)
+{
+  ////////////////////////////////////////////////////////////////////////////
+  // Replace with your code here:
+  r = 0;
+  g = 0;
+  b = 0;
+  ////////////////////////////////////////////////////////////////////////////
+}
