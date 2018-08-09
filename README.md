@@ -111,7 +111,7 @@ _down_ the columns of rows.
 Natural images (e.g., photographs) only require color information, but to
 manipulate images it is often useful to also store a value representing how much
 of a pixel is "covered" by the given color. Intuitively this value (called alpha
-or $α$) represents how opaque (the opposite of _transparent_) each pixel is.
+or $α$[⁴](#⁴latex)) represents how opaque (the opposite of _transparent_) each pixel is.
 When we store rgb + α image as a _4_-channel rgba image. Just like rgb images,
 rgba images are 3D arrays unrolled into a linear array in memory.
 
