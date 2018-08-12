@@ -181,6 +181,22 @@ blue colors at different pixels. The missing color information at each pixel
 needs to be interpolated from neighbors (4 or 2). _Just do "something
 reasonable" for pixels on the very boundary of the image._ [image source](https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf) ](images/bayer.png)
 
+## Color representation
+
+RGB is just one way to represent a color. Another useful representation is store
+the [hue, saturation, and value](https://en.wikipedia.org/wiki/HSL_and_HSV) of a
+color. This "hsv" representation also has 3-channels: typically, the
+[hue](https://en.wikipedia.org/wiki/Hue) or `h` channel is stored in degrees
+(i.e., on a periodic scale) in the range $[0°,360°]$ and the
+[saturation](https://en.wikipedia.org/wiki/Colorfulness) `s` and
+[value](https://en.wikipedia.org/wiki/Lightness) `v` are given as absolute
+values in $[0,1]$.
+
+[Converting between rgb and
+hsv](https://en.wikipedia.org/wiki/HSL_and_HSV#Converting_to_RGB) is
+straightforward and makes it easy to implement certain image changes such as
+shifting the hue of an image (e.g., Instagram's "warmth" filter) and the
+saturation of an image (e.g., Instagram's "saturation" filter).
 
 ## Tasks
 

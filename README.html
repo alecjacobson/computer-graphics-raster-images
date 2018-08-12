@@ -259,6 +259,23 @@ needs to be interpolated from neighbors (4 or 2). <em>Just do &#8220;something
 reasonable&#8221; for pixels on the very boundary of the image.</em> <a href="https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf">image source</a> </figcaption>
 </figure>
 
+<h2 id="colorrepresentation">Color representation</h2>
+
+<p>RGB is just one way to represent a color. Another useful representation is store
+the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">hue, saturation, and value</a> of a
+color. This &#8220;hsv&#8221; representation also has 3-channels: typically, the
+<a href="https://en.wikipedia.org/wiki/Hue">hue</a> or <code>h</code> channel is stored in degrees
+(i.e., on a periodic scale) in the range <span class="math">\([0°,360°]\)</span> and the
+<a href="https://en.wikipedia.org/wiki/Colorfulness">saturation</a> <code>s</code> and
+<a href="https://en.wikipedia.org/wiki/Lightness">value</a> <code>v</code> are given as absolute
+values in <span class="math">\([0,1]\)</span>.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/HSL_and_HSV#Converting_to_RGB">Converting between rgb and
+hsv</a> is
+straightforward and makes it easy to implement certain image changes such as
+shifting the hue of an image (e.g., Instagram&#8217;s &#8220;warmth&#8221; filter) and the
+saturation of an image (e.g., Instagram&#8217;s &#8220;saturation&#8221; filter).</p>
+
 <h2 id="tasks">Tasks</h2>
 
 <blockquote>
