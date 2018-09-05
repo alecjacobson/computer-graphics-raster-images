@@ -87,7 +87,7 @@ Once built, you can execute the assignment from inside the `build/` using
 > algorithms behind the task in the assignment. Students following the lectures
 > should already be familiar with this material.
 
-### Read Chapter 3 of _Fundamentals of Comptuer Graphics (4th Edition)_.
+### Read Chapter 3 of _Fundamentals of Computer Graphics (4th Edition)_.
 
 The most common digital representation of a color image is a 2D array of
 red/green/blue intensities at pixels. Since each entry in the array is actually
