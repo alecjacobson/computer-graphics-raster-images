@@ -80,6 +80,8 @@ Why don't you try this right now?
 
 Once built, you can execute the assignment from inside the `build/` using 
 
+` ./raster `
+
 ## Background
 
 > Every assignment, including this one, will start with a **Background**
