@@ -72,7 +72,13 @@ routine. Starting in this directory, issue:
     mkdir build
     cd build
     cmake ..
-    make 
+
+If you are using Mac or Linux, then issue:
+
+    make
+
+If you are using Windows, then running `cmake ..` should have created a Visual Studio solution file
+called `raster.sln` that you can open and build from there. Building the raster project will generate an .exe file.
 
 Why don't you try this right now?
 
@@ -329,7 +335,7 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 
 ### Submission
 
-Submit your completed homework as a [New Pull Request to this repository](https://github.com/alecjacobson/geometry-processing-introduction/pulls).
+Submit your completed homework on MarkUs. Instructions to come when they are available.
 
 ### Questions? 
 
