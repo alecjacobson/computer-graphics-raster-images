@@ -335,8 +335,8 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 
 ### Submission
 
-Submit your completed homework on MarkUs. [Open the MarkUs course page]
-(https://markus.teach.cs.toronto.edu/csc418-2018-09/) and submit your `src/` directory under
+Submit your completed homework on MarkUs. [Open the MarkUs course 
+page](https://markus.teach.cs.toronto.edu/csc418-2018-09/) and submit your `src/` directory under
 Assignment 1: Raster Images in the `raster-images` repository.
 
 ### Questions? 
