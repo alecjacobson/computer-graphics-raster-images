@@ -282,8 +282,8 @@ Convert a 3-channel RGB image to a 1-channel grayscale image.
 
 Simulate an image acquired from the Bayer mosaic by taking a 3-channel rgb image
 and creating a single channel grayscale image composed of interleaved
-red/green/blue channels. The output image should be twice as big (but only one
-channel).
+red/green/blue channels. The output image should be the same size as the input but only one
+channel.
 
 ![`./raster
 ../shared/data/dog.png` should produce this image in
