@@ -2,14 +2,32 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<link type="text/css" rel="stylesheet" href="shared/css/style.css"/>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
-</script>
-<script type="text/javascript" src="shared/js/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<link type="text/css" rel="stylesheet" href="css/github-markdown.css"/>
+<link rel="stylesheet" href="css/github-markdown.css">
+<style>
+.markdown-body {
+box-sizing: border-box;
+min-width: 200px;
+max-width: 980px;
+margin: 0 auto;
+padding: 45px;
+}
 </head>
 <body>
 
+<pre><code>@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</code></pre>
+
+<p></style>
+<article class="markdown-body"></p>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <div style="display:none">
 <span class="math">\(\newcommand{\A}{\mat{A}}\)</span>
 <span class="math">\(\newcommand{\B}{\mat{B}}\)</span>
@@ -20,6 +38,7 @@ MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 <span class="math">\(\newcommand{\G}{\mat{G}}\)</span>
 <span class="math">\(\newcommand{\H}{\mat{H}}\)</span>
 <span class="math">\(\newcommand{\I}{\mat{I}}\)</span>
+<span class="math">\(\newcommand{\J}{\mat{J}}\)</span>
 <span class="math">\(\newcommand{\K}{\mat{K}}\)</span>
 <span class="math">\(\newcommand{\L}{\mat{L}}\)</span>
 <span class="math">\(\newcommand{\M}{\mat{M}}\)</span>
@@ -38,6 +57,8 @@ MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 <span class="math">\(\newcommand{\Y}{\mat{Y}}\)</span>
 <span class="math">\(\newcommand{\argmax}{\mathop{\text{argmax}}}\)</span>
 <span class="math">\(\newcommand{\argmin}{\mathop{\text{argmin}}}\)</span>
+<span class="math">\(\newcommand{\a}{\vec{a}}\)</span>
+<span class="math">\(\newcommand{\b}{\vec{b}}\)</span>
 <span class="math">\(\newcommand{\c}{\vec{c}}\)</span>
 <span class="math">\(\newcommand{\d}{\vec{d}}\)</span>
 <span class="math">\(\newcommand{\e}{\vec{e}}\)</span>
@@ -45,29 +66,36 @@ MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 <span class="math">\(\newcommand{\g}{\vec{g}}\)</span>
 <span class="math">\(\newcommand{\mat}[1]{\mathbf{#1}}\)</span>
 <span class="math">\(\newcommand{\min}{\mathop{\text{min}}}\)</span>
+<span class="math">\(\newcommand{\m}{\vec{m}}\)</span>
 <span class="math">\(\newcommand{\n}{\vec{n}}\)</span>
 <span class="math">\(\newcommand{\p}{\vec{p}}\)</span>
 <span class="math">\(\newcommand{\q}{\vec{q}}\)</span>
 <span class="math">\(\newcommand{\r}{\vec{r}}\)</span>
 <span class="math">\(\newcommand{\transpose}{{\mathsf T}}\)</span>
 <span class="math">\(\newcommand{\tr}[1]{\mathop{\text{tr}}{\left(#1\right)}}\)</span>
+<span class="math">\(\newcommand{\s}{\vec{s}}\)</span>
 <span class="math">\(\newcommand{\t}{\vec{t}}\)</span>
 <span class="math">\(\newcommand{\u}{\vec{u}}\)</span>
 <span class="math">\(\newcommand{\vec}[1]{\mathbf{#1}}\)</span>
 <span class="math">\(\newcommand{\x}{\vec{x}}\)</span>
 <span class="math">\(\newcommand{\y}{\vec{y}}\)</span>
 <span class="math">\(\newcommand{\z}{\vec{z}}\)</span>
+<span class="math">\(\newcommand{\0}{\vec{0}}\)</span>
 <span class="math">\(\renewcommand{\v}{\vec{v}}\)</span>
+<!-- https://github.com/mathjax/MathJax/issues/1766 -->
+<span class="math">\(\renewcommand{\hat}[1]{\widehat{#1}}\)</span>
 </div>
 
 <h1 id="computergraphics–rasterimages">Computer Graphics – Raster Images</h1>
 
 <blockquote>
-<p><strong>To get started:</strong> Fork this repository then issue</p>
+<p><strong>To get started:</strong> Clone this repository and all its <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> dependencies using:</p>
 
-<pre><code>git clone --recursive http://github.com/[username]/computer-graphics-raster-images.git
+<pre><code>git clone --recursive https://github.com/alecjacobson/computer-graphics-raster-images.git
 </code></pre>
 </blockquote>
+
+<p><strong>Do not fork:</strong> Clicking &#8220;Fork&#8221; will create a <em>public</em> repository. If you&#8217;d like to use GitHub while you work on your assignment, then mirror this repo as a new <em>private</em> repository: https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private</p>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -98,12 +126,9 @@ src/
   function1.cpp
   function2.cpp
   ...
-shared/
-  libigl/
-    include/
-      igl/
-        ...
+data/
   ...
+...
 </code></pre>
 
 <p>The <code>README.md</code> file will describe the background, contents and tasks of the
@@ -123,9 +148,10 @@ implement as part of the assignment. <strong><em>Do not change</em></strong> the
 specified in the <code>include/</code> directory. This is where you will implement the
 parts of the assignment.</p>
 
-<p>The <code>shared/</code> directory will contain shared resources: cmake files, dependences
-and data. Feel free to poke around in here, but you shouldn&#8217;t change any of
-these files.</p>
+<p>The <code>data/</code> directory contains <em>sample</em> input data for your program. Keep in
+mind you should create your own test data to verify your program as you write
+it. It is not necessarily sufficient that your program <em>only</em> works on the given
+sample data.</p>
 
 <h2 id="compilation">Compilation</h2>
 
@@ -134,7 +160,7 @@ routine. Starting in this directory, issue:</p>
 
 <pre><code>mkdir build
 cd build
-cmake .. 
+cmake ..
 </code></pre>
 
 <p>If you are using Mac or Linux, then issue:</p>
@@ -163,7 +189,7 @@ algorithms behind the task in the assignment. Students following the lectures
 should already be familiar with this material.</p>
 </blockquote>
 
-<h3 id="readchapter3offundamentalsofcomptuergraphics4thedition.">Read Chapter 3 of <em>Fundamentals of Computer Graphics (4th Edition)</em>.</h3>
+<h3 id="readchapter3offundamentalsofcomputergraphics4thedition.">Read Chapter 3 of <em>Fundamentals of Computer Graphics (4th Edition)</em>.</h3>
 
 <p>The most common digital representation of a color image is a 2D array of
 red/green/blue intensities at pixels. Since each entry in the array is actually
@@ -332,10 +358,10 @@ your comments.</p>
 
 <figure>
 <img src="images/rgb.png" alt="If youve implemented src/rgba_to_rgb.cpp correctly then ./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 rgb.ppm." />
 <figcaption>If you&#8217;ve implemented <code>src/rgba_to_rgb.cpp</code> correctly then <code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>rgb.ppm</code>.</figcaption>
 </figure>
 
@@ -345,10 +371,10 @@ rgb.ppm." />
 
 <figure>
 <img src="images/reflected.png" alt="If youve implemented src/write_ppm.cpp correctly then ./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 reflected.ppm." />
 <figcaption>If you&#8217;ve implemented <code>src/write_ppm.cpp</code> correctly then <code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>reflected.ppm</code>.</figcaption>
 </figure>
 
@@ -358,10 +384,10 @@ reflected.ppm." />
 
 <figure>
 <img src="images/rotated.png" alt="./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 rotated.ppm." />
 <figcaption><code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>rotated.ppm</code>.</figcaption>
 </figure>
 
@@ -371,10 +397,10 @@ rotated.ppm." />
 
 <figure>
 <img src="images/gray.png" alt="./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 gray.ppm." />
 <figcaption><code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>gray.ppm</code>.</figcaption>
 </figure>
 
@@ -387,10 +413,10 @@ channel.</p>
 
 <figure>
 <img src="images/bayer.png" alt="./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 bayer.ppm. Zoom in to see interleaving." />
 <figcaption><code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>bayer.ppm</code>. <strong>Zoom in</strong> to see interleaving.</figcaption>
 </figure>
 
@@ -400,9 +426,9 @@ bayer.ppm. Zoom in to see interleaving." />
 3-channel rgb image.</p>
 
 <figure>
-<img src="images/demosaicked.png" alt="./raster ../shared/data/dog.png should produce this image in
+<img src="images/demosaicked.png" alt="./raster ../data/dog.png should produce this image in
 demosaicked.ppm." />
-<figcaption><code>./raster ../shared/data/dog.png</code> should produce this image in
+<figcaption><code>./raster ../data/dog.png</code> should produce this image in
 <code>demosaicked.ppm</code>.</figcaption>
 </figure>
 
@@ -424,10 +450,10 @@ using red, green and blue intensities.</p>
 
 <figure>
 <img src="images/shifted.png" alt="./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 shifted.ppm." />
 <figcaption><code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>shifted.ppm</code>.</figcaption>
 </figure>
 
@@ -439,10 +465,10 @@ shifted.ppm." />
 
 <figure>
 <img src="images/desaturated.png" alt="./raster
-../shared/data/dog.png should produce this image in
+../data/dog.png should produce this image in
 desaturated.ppm." />
 <figcaption><code>./raster
-../shared/data/dog.png</code> should produce this image in
+../data/dog.png</code> should produce this image in
 <code>desaturated.ppm</code>.</figcaption>
 </figure>
 
@@ -453,17 +479,17 @@ desaturated.ppm." />
 
 <figure>
 <img src="images/composite.png" alt="./raster
-../shared/data/{dog,glasses,laser-beams,sparkles}.png should produce this image in
+../data/{dog,glasses,laser-beams,sparkles}.png should produce this image in
 composite.ppm." />
 <figcaption><code>./raster
-../shared/data/{dog,glasses,laser-beams,sparkles}.png</code> should produce this image in
+../data/{dog,glasses,laser-beams,sparkles}.png</code> should produce this image in
 <code>composite.ppm</code>.</figcaption>
 </figure>
 
 <h3 id="submission">Submission</h3>
 
-<p>Submit your completed homework on MarkUs.
-<a href="https://markus.teach.cs.toronto.edu/csc418-2018-09/">Open the MarkUs course page</a> and submit all the <code>.cpp</code> files in your <code>src/</code> directory under
+<p>Submit your completed homework on MarkUs. <a href="https://markus.teach.cs.toronto.edu/csc418-2018-09/">Open the MarkUs course
+page</a> and submit all the <code>.cpp</code> files in your <code>src/</code> directory under
 Assignment 1: Raster Images in the <code>raster-images</code> repository.</p>
 
 <h3 id="questions">Questions?</h3>
@@ -516,7 +542,7 @@ markdown browsers will show the typeset math. You can also generate
 <code>README.html</code> using
 <a href="http://fletcherpenney.net/multimarkdown/">multimarkdown</a>:</p>
 
-<pre><code>cat shared/markdown/header.md README.md | multimarkdown --process-html -o README.html
+<pre><code>cat markdown/header.md README.md | multimarkdown --process-html -o README.html
 </code></pre>
 </blockquote>
 

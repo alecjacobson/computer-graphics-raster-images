@@ -37,12 +37,9 @@ All assignments will have a similar directory and file layout:
       function1.cpp
       function2.cpp
       ...
-    shared/
-      libigl/
-        include/
-          igl/
-            ...
+    data/
       ...
+    ...
 
 The `README.md` file will describe the background, contents and tasks of the
 assignment.
@@ -61,9 +58,10 @@ The `src/` directory contains _empty implementations_ of the functions
 specified in the `include/` directory. This is where you will implement the
 parts of the assignment.
 
-The `shared/` directory will contain shared resources: cmake files, dependences
-and data. Feel free to poke around in here, but you shouldn't change any of
-these files.
+The `data/` directory contains _sample_ input data for your program. Keep in
+mind you should create your own test data to verify your program as you write
+it. It is not necessarily sufficient that your program _only_ works on the given
+sample data.
 
 ## Compilation
 
@@ -249,7 +247,7 @@ At this point, you should start seeing output files:
  - `shifted.ppm`
 
 ![If you've implemented `src/rgba_to_rgb.cpp` correctly then `./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `rgb.ppm`.](images/rgb.png) 
 
 ### `src/reflect.cpp`
@@ -257,7 +255,7 @@ At this point, you should start seeing output files:
 Horizontally reflect an image (like a mirror)
 
 ![If you've implemented `src/write_ppm.cpp` correctly then `./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `reflected.ppm`.](images/reflected.png) 
 
 ### `src/rotate.cpp`
@@ -265,7 +263,7 @@ Horizontally reflect an image (like a mirror)
 Rotate an image 90°  counter-clockwise
 
 ![`./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `rotated.ppm`.](images/rotated.png) 
 
 ### `src/rgb_to_gray.cpp`
@@ -273,7 +271,7 @@ Rotate an image 90°  counter-clockwise
 Convert a 3-channel RGB image to a 1-channel grayscale image.
 
 ![`./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `gray.ppm`.](images/gray.png) 
 
 ### `src/simulate_bayer_mosaic.cpp`
@@ -284,7 +282,7 @@ red/green/blue channels. The output image should be the same size as the input b
 channel.
 
 ![`./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `bayer.ppm`. **Zoom in** to see interleaving.](images/bayer.png) 
 
 ### `src/demosaic.cpp`
@@ -292,7 +290,7 @@ channel.
 Given a mosaiced image (interleaved GBRG colors in a single channel), created a
 3-channel rgb image.
 
-![`./raster ../shared/data/dog.png` should produce this image in
+![`./raster ../data/dog.png` should produce this image in
 `demosaicked.ppm`.](images/demosaicked.png) 
 
 ### `src/rgb_to_hsv.cpp`
@@ -312,7 +310,7 @@ Shift the hue of a color rgb image.
 Hint: Use your `rgb_to_hsv` and `hsv_to_rgb` functions.
 
 ![`./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `shifted.ppm`.](images/shifted.png) 
 
 ### `src/desaturate.cpp`
@@ -322,7 +320,7 @@ Desaturate a given rgb color image by a given factor.
 Hint: Use your `rgb_to_hsv` and `hsv_to_rgb` functions.
 
 ![`./raster
-../shared/data/dog.png` should produce this image in
+../data/dog.png` should produce this image in
 `desaturated.ppm`.](images/desaturated.png) 
 
 ### `src/over.cpp`
@@ -331,7 +329,7 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 "Over" is the Porter-Duff Over operator.
 
 ![`./raster
-../shared/data/{dog,glasses,laser-beams,sparkles}.png` should produce this image in
+../data/{dog,glasses,laser-beams,sparkles}.png` should produce this image in
 `composite.ppm`.](images/composite.png) 
 
 ### Submission
@@ -389,5 +387,5 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 > `README.html` using
 > [multimarkdown](http://fletcherpenney.net/multimarkdown/):
 >
->     cat shared/markdown/header.md README.md | multimarkdown --process-html -o README.html
+>     cat markdown/header.md README.md | multimarkdown --process-html -o README.html
 >
