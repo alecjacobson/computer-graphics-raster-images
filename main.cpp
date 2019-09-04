@@ -15,17 +15,17 @@
 
 int main(int argc, char *argv[])
 {
-  char ** input_filenames = argv+1;
+  std::vector<std::string> input_filenames(argv + 1, argv + argc);
   int num_inputs = argc-1;
   if(num_inputs == 0)
   {
-    const char * default_input_file_names[] = {
+    const std::vector<std::string> default_input_file_names = {
       "../data/dog.png",
       "../data/glasses.png",
       "../data/laser-beams.png",
       "../data/sparkles.png"
     };
-    input_filenames = const_cast<char **>(default_input_file_names);
+    input_filenames = default_input_file_names;
     num_inputs = 4;
   }
 
