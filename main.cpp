@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
   if(num_inputs == 0)
   {
     const char * default_input_file_names[] = {
-      "../shared/data/dog.png",
-      "../shared/data/glasses.png",
-      "../shared/data/laser-beams.png",
-      "../shared/data/sparkles.png"
+      "../data/dog.png",
+      "../data/glasses.png",
+      "../data/laser-beams.png",
+      "../data/sparkles.png"
     };
     input_filenames = const_cast<char **>(default_input_file_names);
     num_inputs = 4;
