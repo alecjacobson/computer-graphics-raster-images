@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-// Write an rgb or grayscale image to a .ppm file.
+// Write an rgb or grayscale image to an ASCII (P3) .ppm file.
 //
 // Inputs:
 //   filename  path to .ppm file as string
