@@ -375,7 +375,7 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 >
 > #### ³ Windows Users
 >
-> Our assignments only support the Microsoft Visual Studio 2015 compiler in
+> Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
 > 64bit mode. It will not work with a 32bit build and it will not work with
 > older versions of visual studio.
 >
