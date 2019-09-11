@@ -383,7 +383,7 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 >
 > This markdown document, and those for all other assignments, contains
 > $\LaTeX$ math. GitHub just shows the un-evaluated LaTeX code, but other
-> markdown browsers may show the typeset math. Alaternatively, open the
+> markdown browsers may show the typeset math. Alternatively, open the
 > `README.html` (must be online) to view the equations.
 >
 > For reference, you can generate `README.html` from the `README.md` using
