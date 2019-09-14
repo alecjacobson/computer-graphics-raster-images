@@ -186,7 +186,7 @@ methods.
 ![The Bayer-pattern image on the left has "exact" measurements of red, green and
 blue colors at different pixels. The missing color information at each pixel
 needs to be interpolated from neighbors (4 or 2). _Just do "something
-reasonable" for pixels on the very boundary of the image._ [image source](https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf) ](images/bayer.png)
+reasonable" for pixels on the very boundary of the image._ [image source](https://www.ics.uci.edu/~majumder/PHOTO/DemosaicingAndWhiteBalancing.pdf) ](images/bayer-info.png)
 
 ## Color representation
 
