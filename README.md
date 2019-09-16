@@ -140,6 +140,9 @@ point
 numbers](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 `0` is converted to `0.0` and `255` to `1.0`.
 
+To simplify the implementation and to help with debugging, we will use the
+text-based .ppm formats for this assignment.
+
 ## Grayscale Images
 
 Surprisingly there are
