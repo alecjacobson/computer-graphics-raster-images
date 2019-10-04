@@ -370,6 +370,8 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 >     sudo apt-get install cmake
 >     sudo apt-get install libx11-dev
 >     sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+>     sudo apt-get install libxinerama1 libxinerama-dev
+>     sudo apt-get install libxcursor-dev
 >     sudo apt-get install libxrandr-dev
 >     sudo apt-get install libxi-dev
 >     sudo apt-get install libxmu-dev
