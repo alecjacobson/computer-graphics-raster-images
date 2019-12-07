@@ -107,7 +107,7 @@ its green value, then its blue value, and then the rgb values of its neighbor to
 the right and so on _across_ the row of pixels, and then moving to the next row
 _down_ the columns of rows.
 
-> Q: Suppose you have a 767×772 rgb image stored in an array called `data`. How
+> Q: Suppose you have a 767\times 772 rgb image stored in an array called `data`. How
 > would you access the green value at the pixel on the 36th row and 89th
 > column?
 >
@@ -197,7 +197,7 @@ RGB is just one way to represent a color. Another useful representation is store
 the [hue, saturation, and value](https://en.wikipedia.org/wiki/HSL_and_HSV) of a
 color. This "hsv" representation also has 3-channels: typically, the
 [hue](https://en.wikipedia.org/wiki/Hue) or `h` channel is stored in degrees
-(i.e., on a periodic scale) in the range $[0°,360°]$ and the
+(i.e., on a periodic scale) in the range $[0^\circ ,360^\circ ]$ and the
 [saturation](https://en.wikipedia.org/wiki/Colorfulness) `s` and
 [value](https://en.wikipedia.org/wiki/Lightness) `v` are given as absolute
 values in $[0,1]$.
@@ -263,7 +263,7 @@ Horizontally reflect an image (like a mirror)
 
 ### `src/rotate.cpp`
 
-Rotate an image 90°  counter-clockwise
+Rotate an image 90^\circ   counter-clockwise
 
 ![`./raster
 ../data/dog.png` should produce this image in
