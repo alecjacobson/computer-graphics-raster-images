@@ -107,7 +107,7 @@ its green value, then its blue value, and then the rgb values of its neighbor to
 the right and so on _across_ the row of pixels, and then moving to the next row
 _down_ the columns of rows.
 
-> Q: Suppose you have a 767\times 772 rgb image stored in an array called `data`. How
+> Q: Suppose you have a 767×772 rgb image stored in an array called `data`. How
 > would you access the green value at the pixel on the 36th row and 89th
 > column?
 >
