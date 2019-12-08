@@ -107,7 +107,7 @@ its green value, then its blue value, and then the rgb values of its neighbor to
 the right and so on _across_ the row of pixels, and then moving to the next row
 _down_ the columns of rows.
 
-> Q: Suppose you have a 767×772 rgb image stored in an array called `data`. How
+> Q: Suppose you have a 767\times 772 rgb image stored in an array called `data`. How
 > would you access the green value at the pixel on the 36th row and 89th
 > column?
 >
@@ -118,7 +118,7 @@ _down_ the columns of rows.
 Natural images (e.g., photographs) only require color information, but to
 manipulate images it is often useful to also store a value representing how much
 of a pixel is "covered" by the given color. Intuitively this value (called alpha
-or <img src="/tex/cc7630225f60587650acd069f04c700e.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/>[⁴](#⁴latex)) represents how opaque (the opposite of _transparent_) each pixel is.
+or <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/> represents how opaque (the opposite of _transparent_) each pixel is.
 When we store rgb + α image as a _4_-channel rgba image. Just like rgb images,
 rgba images are 3D arrays unrolled into a linear array in memory.
 
@@ -381,16 +381,4 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 > Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
 > 64bit mode. It will not work with a 32bit build and it will not work with
 > older versions of visual studio.
->
-> #### ⁴ LaTeX
->
-> This markdown document, and those for all other assignments, contains
-> <img src="/tex/87181ad2b235919e0785dee664166921.svg?invert_in_darkmode&sanitize=true" align=middle width=45.69716744999999pt height=22.465723500000017pt/> math. GitHub just shows the un-evaluated LaTeX code, but other
-> markdown browsers may show the typeset math. Alternatively, open the
-> `README.html` (must be online) to view the equations.
->
-> For reference, you can generate `README.html` from the `README.md` using
-> [multimarkdown](http://fletcherpenney.net/multimarkdown/):
->
->     cat markdown/header.md README.md | multimarkdown --process-html -o README.html
 >
