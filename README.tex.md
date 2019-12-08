@@ -118,7 +118,7 @@ _down_ the columns of rows.
 Natural images (e.g., photographs) only require color information, but to
 manipulate images it is often useful to also store a value representing how much
 of a pixel is "covered" by the given color. Intuitively this value (called alpha
-or $α$[⁴](#⁴latex)) represents how opaque (the opposite of _transparent_) each pixel is.
+or $\alpha$ represents how opaque (the opposite of _transparent_) each pixel is.
 When we store rgb + α image as a _4_-channel rgba image. Just like rgb images,
 rgba images are 3D arrays unrolled into a linear array in memory.
 
@@ -383,16 +383,4 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 > Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
 > 64bit mode. It will not work with a 32bit build and it will not work with
 > older versions of visual studio.
->
-> #### ⁴ LaTeX
->
-> This markdown document, and those for all other assignments, contains
-> $\LaTeX$ math. GitHub just shows the un-evaluated LaTeX code, but other
-> markdown browsers may show the typeset math. Alternatively, open the
-> `README.html` (must be online) to view the equations.
->
-> For reference, you can generate `README.html` from the `README.md` using
-> [multimarkdown](http://fletcherpenney.net/multimarkdown/):
->
->     cat markdown/header.md README.md | multimarkdown --process-html -o README.html
 >
