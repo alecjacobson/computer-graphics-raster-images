@@ -6,14 +6,14 @@
 //
 //
 // Inputs:
-//   A  width*height*4 array of 4-channel rgba instensities (i.e., rgb +
+//   A  width*height*4 array of 4-channel rgba intensities (i.e., rgb +
 //     alpha channel for transparency)
-//   B  width*height*4 array of 4-channel rgba instensities (i.e., rgb +
+//   B  width*height*4 array of 4-channel rgba intensities (i.e., rgb +
 //     alpha channel for transparency)
 //   width  image width (i.e., number of columns)
 //   height  image height (i.e., number of rows)
 // Outputs:
-//   C  width*height*4 array of 4-channel rgba instensities (i.e., rgb +
+//   C  width*height*4 array of 4-channel rgba intensities (i.e., rgb +
 //     alpha channel for transparency)
 void over(
   const std::vector<unsigned char> & A,
