@@ -7,6 +7,7 @@
 #include <string>
 #include <iterator>
 #include <vector>
+#include <iterator>
 inline bool read_rgba_from_png(
   const std::string & filename,
   std::vector<unsigned char> & rgba,
