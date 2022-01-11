@@ -118,7 +118,7 @@ _down_ the columns of rows.
 Natural images (e.g., photographs) only require color information, but to
 manipulate images it is often useful to also store a value representing how much
 of a pixel is "covered" by the given color. Intuitively this value (called alpha
-or <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/> represents how opaque (the opposite of _transparent_) each pixel is.
+or $\alpha$ represents how opaque (the opposite of _transparent_) each pixel is.
 When we store rgb + α image as a _4_-channel rgba image. Just like rgb images,
 rgba images are 3D arrays unrolled into a linear array in memory.
 
@@ -154,7 +154,9 @@ for human perception. For example, a very naive method is to average red, green
 and blue intensities. A slightly better (and very popular method) is to take a
 weighted average giving higher priority to green: 
 
-<p align="center"><img src="/tex/a954b221cf9264cf11fcf943891f27bb.svg?invert_in_darkmode&sanitize=true" align=middle width=232.67438535pt height=14.611878599999999pt/></p>
+$$
+i = 0.2126 r + 0.7152 g + 0.0722 b.
+$$
 
 > Q: Why are humans more sensitive to green?
 >
@@ -195,10 +197,10 @@ RGB is just one way to represent a color. Another useful representation is store
 the [hue, saturation, and value](https://en.wikipedia.org/wiki/HSL_and_HSV) of a
 color. This "hsv" representation also has 3-channels: typically, the
 [hue](https://en.wikipedia.org/wiki/Hue) or `h` channel is stored in degrees
-(i.e., on a periodic scale) in the range <img src="/tex/79e8ecba3844cf52c00856dfc8f397ea.svg?invert_in_darkmode&sanitize=true" align=middle width=64.42934684999999pt height=24.65753399999998pt/> and the
+(i.e., on a periodic scale) in the range $[0^\circ ,360^\circ ]$ and the
 [saturation](https://en.wikipedia.org/wiki/Colorfulness) `s` and
 [value](https://en.wikipedia.org/wiki/Lightness) `v` are given as absolute
-values in <img src="/tex/acf5ce819219b95070be2dbeb8a671e9.svg?invert_in_darkmode&sanitize=true" align=middle width=32.87674994999999pt height=24.65753399999998pt/>.
+values in $[0,1]$.
 
 [Converting between rgb and
 hsv](https://en.wikipedia.org/wiki/HSL_and_HSV#Converting_to_RGB) is

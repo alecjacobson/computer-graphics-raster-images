@@ -4,11 +4,11 @@
 #include <vector>
 #include <string>
 
-// Write an rgb or grayscale image to an ASCII (P3) .ppm file.
+// Write an rgb or grayscale image to an ASCII (P2/P3) .ppm file.
 //
 // Inputs:
 //   filename  path to .ppm file as string
-//   data  width*heigh*num_channels array of image intensity data
+//   data  width*height*num_channels array of image intensity data
 //   width  image width (i.e., number of columns)
 //   height  image height (i.e., number of rows)
 //   num_channels  number of channels (e.g., for rgb 3, for grayscale 1)
