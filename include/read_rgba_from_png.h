@@ -5,6 +5,7 @@
 #include "stb_image.h"
 
 #include <string>
+#include <iterator>
 #include <vector>
 inline bool read_rgba_from_png(
   const std::string & filename,
